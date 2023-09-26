@@ -296,6 +296,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 50
   head: {fileID: 1203187755}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!143 &360588818
 CharacterController:
   m_ObjectHideFlags: 0
@@ -473,6 +476,70 @@ Transform:
   m_Children: []
   m_Father: {fileID: 624111526}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &618161053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 618161055}
+  - component: {fileID: 618161054}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &618161054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618161053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4da96f868827154c978225dc369b96a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 360588815}
+  spawnPoints:
+  - {fileID: 1618470751}
+  - {fileID: 1869821399}
+  - {fileID: 1578245357}
+  - {fileID: 1047937026}
+  - {fileID: 157253359}
+  - {fileID: 272900746}
+  - {fileID: 494907262}
+  - {fileID: 534055287}
+  - {fileID: 589780145}
+  - {fileID: 540389491}
+  - {fileID: 432242046}
+  - {fileID: 644897625}
+  alien: {fileID: 1350545232}
+  maxAliensOnScreen: 0
+  totalAliens: 0
+  minSpawnTime: 0
+  maxSpawnTime: 0
+  aliensPerSpawn: 0
+--- !u!4 &618161055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618161053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.037013, y: 20.051083, z: 3.87607}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &624111525
 GameObject:
@@ -922,6 +989,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e8cf5b3d504b04a09a3d13bd4720c463, type: 2}
+    - target: {fileID: 5545477042616774485, guid: 7f78b096b427d419f9918e4ae4fc4aec, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5834953974792395099, guid: 7f78b096b427d419f9918e4ae4fc4aec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
