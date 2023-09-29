@@ -1537,7 +1537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484680569024891453, guid: 2d6b581b9c6dda341992317faa9d3ca6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.9
+      value: 13.53
       objectReference: {fileID: 0}
     - target: {fileID: 484680569024891453, guid: 2d6b581b9c6dda341992317faa9d3ca6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1577,6 +1577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 8414472036392855681, guid: 2d6b581b9c6dda341992317faa9d3ca6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2d6b581b9c6dda341992317faa9d3ca6, type: 3}
 --- !u!1 &1350545232 stripped
 GameObject:
@@ -1591,7 +1592,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350545232}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2.52
