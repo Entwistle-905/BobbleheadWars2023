@@ -1499,6 +1499,32 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!1 &1230303909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9067565529417978118, guid: 2d6b581b9c6dda341992317faa9d3ca6, type: 3}
+  m_PrefabInstance: {fileID: 1350545231}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1230303911
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230303909}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 51263829c89d04a4cb4f2d674d4c5005, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1242442327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1641,6 +1667,10 @@ PrefabInstance:
     - target: {fileID: 2745201047965237004, guid: 2d6b581b9c6dda341992317faa9d3ca6, type: 3}
       propertyPath: m_Name
       value: Alien
+      objectReference: {fileID: 0}
+    - target: {fileID: 2745201047965237004, guid: 2d6b581b9c6dda341992317faa9d3ca6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
