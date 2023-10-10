@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 484680569024891453}
   - component: {fileID: 5062034606296544133}
-  - component: {fileID: -8059147270567141233}
   - component: {fileID: -4487833686709953845}
-  - component: {fileID: 8414472036392855681}
+  - component: {fileID: 1350545234}
+  - component: {fileID: 1350545233}
   m_Layer: 6
   m_Name: Alien
   m_TagString: Untagged
@@ -59,7 +59,21 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 1
---- !u!54 &-8059147270567141233
+--- !u!114 &-4487833686709953845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2745201047965237004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb03d36234e6db74d88e2a930c693aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  navigatioinUpdate: 0.5
+--- !u!54 &1350545234
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,21 +89,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-4487833686709953845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2745201047965237004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb03d36234e6db74d88e2a930c693aa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  navigatioinUpdate: 0.5
---- !u!135 &8414472036392855681
+--- !u!135 &1350545233
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,7 +97,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2745201047965237004}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2.52
@@ -246,7 +246,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: c62bb7c342d064be783edcee0d6a5064, type: 3}
   m_PrefabInstance: {fileID: 9067565529417947046}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &9104027331502476444
+--- !u!95 &1230303911
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0

@@ -19,10 +19,10 @@ public class Alien : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.destination = target.position;
 
         if (target != null)
         {
+            agent.destination = target.position;
             navigationTime += Time.deltaTime;
             if (navigationTime > navigatioinUpdate)
             {
@@ -35,5 +35,6 @@ public class Alien : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
+        SoundManager.Instance.PlayOneShot(SoundManager.Instance.alienDeath);
     }
 }
