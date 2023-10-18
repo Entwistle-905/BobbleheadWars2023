@@ -10,6 +10,7 @@ public class Alien : MonoBehaviour
     private NavMeshAgent agent;
     public float navigatioinUpdate;
     private float navigationTime = 0;
+    private DeathParticles deathParticles;
 
     public UnityEvent OnDestory;
 
@@ -64,6 +65,22 @@ public class Alien : MonoBehaviour
         SoundManager.Instance.PlayOneShot(SoundManager.Instance.alienDeath);
 
         head.GetComponent<SelfDestruct>().Initiate();
+
+        if (deathParticles)
+        {
+            deathParticles.transform.parent = null;
+            deathParticles.Activate();
+        }
+
         Destroy(gameObject);
+    }
+
+    public DeathParticles GetDeathParticles()
+    {
+        if (deathParticles == null)
+        {
+            deathParticles = GetComponentInChildren<DeathParticles>();
+        }
+        return deathParticles;
     }
 }
