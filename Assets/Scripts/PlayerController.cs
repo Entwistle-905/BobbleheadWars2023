@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     private float timeSinceHit = 0;         // tracks amount of time in the grace period
     private int hitNumber = -1;             // the hero took a hit
 
+    public Rigidbody marineBody;
+    private bool isDead = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -94,7 +97,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    // death todo
+                    Die();
                 }
                 isHit = true;
                 SoundManager.Instance.PlayOneShot(SoundManager.Instance.hurt);
@@ -103,4 +106,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+    public void Die()
+    {
+        bodyAnimator.SetBool("IsMoving", false);
+        marineBody.transform.parent = null;
+        marineBody.isKinematic = false;
+        marineBody.useGravity = true;
+        marineBody.gameObject.GetComponent<CapsuleCollider>().enabled = true;
+        marineBody.gameObject.GetComponent<Gun>().enabled = false;
+
+        Destroy(head.gameObject.GetComponent<HingeJoint>());
+        head.transform.parent = null;
+        head.useGravity = true;
+        SoundManager.Instance.PlayOneShot(SoundManager.Instance.marineDeath);
+        Destroy(gameObject);
+    }
 }
