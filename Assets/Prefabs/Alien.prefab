@@ -73,6 +73,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   navigatioinUpdate: 0.5
+  OnDestory:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &1350545234
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.AI;
 
 public class Alien : MonoBehaviour
@@ -9,6 +10,8 @@ public class Alien : MonoBehaviour
     private NavMeshAgent agent;
     public float navigatioinUpdate;
     private float navigationTime = 0;
+
+    public UnityEvent OnDestory;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +37,15 @@ public class Alien : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        Die();
+        OnDestory.Invoke(); // notifies all listeners, including GameManager.
+        OnDestory.RemoveAllListeners();
+
         SoundManager.Instance.PlayOneShot(SoundManager.Instance.alienDeath);
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
     }
 }
