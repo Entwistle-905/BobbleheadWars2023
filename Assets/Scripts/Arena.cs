@@ -8,7 +8,8 @@ public class Arena : MonoBehaviour
     public Transform elevator;
     private Animator arenaAnimator;
     private SphereCollider sphereCollider;
-
+    public Gun gun;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +25,16 @@ public class Arena : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Camera.main.transform.parent.gameObject.
-        GetComponent<CameraMovement>().enabled = false;
+        //Camera.main.transform.parent.gameObject.GetComponent<CameraMovement>().enabled = false;
         player.transform.parent = elevator.transform;
-
+        gun.enabled = false;
         player.GetComponent<PlayerController>().enabled = false;
         SoundManager.Instance.PlayOneShot(SoundManager.Instance.elevatorArrived);
         arenaAnimator.SetBool("OnElevator", true);
+    }
+
+    public void ActivatePlatform()
+    {
+        sphereCollider.enabled = true;
     }
 }

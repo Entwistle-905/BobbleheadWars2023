@@ -28142,4 +28142,11 @@ AnimationClip:
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.96666664
+    functionName: ActivatePlatform
+    data: 
+    objectReferenceParameter: {fileID: 4300000, guid: 7f78b096b427d419f9918e4ae4fc4aec, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     private int hitNumber = -1;             // the hero took a hit
 
     public Rigidbody marineBody;
-    private bool isDead = false;
+    //private bool isDead = false;
 
     private DeathParticles deathParticles;
 
@@ -57,8 +57,11 @@ public class PlayerController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Debug.DrawRay(ray.origin, ray.direction * 1000, Color.green);
 
-        if (Physics.Raycast(ray, out hit, 1000, layerMask, QueryTriggerInteraction.Ignore))
+        Debug.Log(Physics.Raycast(ray, out hit, 1000, layerMask, QueryTriggerInteraction.Ignore));
+
+        if (Physics.Raycast(ray, out hit, 9999, layerMask, QueryTriggerInteraction.Ignore))
         {
+            
             if (hit.point != currentLookTarget)
             {
                 currentLookTarget = hit.point;
